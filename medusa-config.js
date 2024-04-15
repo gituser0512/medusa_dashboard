@@ -37,10 +37,13 @@ const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {
-    resolve: `@medusajs/file-local`,
+    resolve: "medusa-file-r2",
     options: {
-      upload_dir: "uploads",
-      backend_url: "https://backend-server-production-190e.up.railway.app",
+      account_id: process.env.R2_ACCOUNT_ID,
+      access_key: process.env.R2_ACCESS_KEY,
+      secret_key: process.env.R2_SECRET_KEY,
+      bucket: process.env.R2_BUCKET_NAME,
+      public_url: process.env.R2_BUCKET_PUBLIC_URL,
     },
   },
   {
