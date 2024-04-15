@@ -40,7 +40,7 @@ const plugins = [
     resolve: `@medusajs/file-local`,
     options: {
       upload_dir: "uploads",
-      backend_url: process.env.MEDUSA_ADMIN_BACKEND_URL,
+      backend_url: "https://backend-server-production-190e.up.railway.app",
     },
   },
   {
