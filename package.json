@@ -25,6 +25,7 @@
     "dev": "cross-env npm run build:server && medusa develop"
   },
   "dependencies": {
+    "@devon/medusa-file-bunny": "^0.0.7",
     "@medusajs/admin": "latest",
     "@medusajs/cache-inmemory": "latest",
     "@medusajs/cache-redis": "latest",
@@ -37,6 +38,7 @@
     "cors": "^2.8.5",
     "dotenv": "16.3.1",
     "express": "^4.17.2",
+    "medusa-file-github-private": "^0.1.0",
     "medusa-file-r2": "^0.0.2",
     "medusa-file-s3": "^1.4.1",
     "medusa-fulfillment-manual": "latest",

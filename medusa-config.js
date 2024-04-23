@@ -36,12 +36,6 @@ const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
-  // {
-  //   resolve: `@medusajs/file-local`,
-  //   options: {
-  //     upload_dir: "uploads",
-  //   },
-  // },
   {
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
@@ -53,11 +47,16 @@ const plugins = [
     },
   },
   {
-    owner: "gituser0512",
-    repo: "shopntrollyimages",
-    path: "public",
-    cdn_url: "https://cdn.jsdelivr.net/gh",
-    github_token:  process.env.GITHUB_TOKEN
+    resolve: `medusa-file-s3`,
+    options: {
+      s3_url: process.env.S3_URL,
+      bucket: process.env.S3_BUCKET,
+      prefix: process.env.S3_PREFIX, // optional
+      region: process.env.S3_REGION,
+      access_key_id: process.env.S3_ACCESS_KEY_ID,
+      secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+      aws_config_object: {},
+    },
   },
   {
     resolve: `medusa-plugin-meilisearch`,
