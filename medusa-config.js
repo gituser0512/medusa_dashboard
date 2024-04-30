@@ -95,7 +95,7 @@ const plugins = [
       channel_id: process.env.SHIPROCKET_CHANNEL_ID, 
       email: process.env.SHIPROCKET_EMAIL, 
       password: process.env.SHIPROCKET_PASSWORD, 
-      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2NjMxNzAsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE1MjUzMTM5LCJqdGkiOiJta2k5Qk1RUXlqZnVuM1FqIiwiaWF0IjoxNzE0Mzg5MTM5LCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNDM4OTEzOSwiY2lkIjo0NTA4MjQ0LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.arpOZHMxVQxgGvoPad-3rDdCypIbNdkiNo5xMexY2Gk", //(required. leave empty)
+      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2NjMxNzAsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE1MzM2ODIyLCJqdGkiOiJqdFhESXkyczJsUW53RE1xIiwiaWF0IjoxNzE0NDcyODIyLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNDQ3MjgyMiwiY2lkIjo0NTA4MjQ0LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.SuUBBBKxFhyn2PJjWB7rMUU4bw-UR_LcFBPhu85lfZA", //(required. leave empty)
       pricing: 'flat_rate', //"flat_rate" or "calculated" (required)
       length_unit: 'cm', //"mm", "cm" or "inches" (required)
       multiple_items: 'single_shipment', //"single_shipment" or "split_shipment"(default) (required)
