@@ -51,44 +51,58 @@ const plugins = [
     options: {
       s3_url: process.env.S3_URL,
       bucket: process.env.S3_BUCKET,
-      prefix: process.env.S3_PREFIX, // optional
       region: process.env.S3_REGION,
       access_key_id: process.env.S3_ACCESS_KEY_ID,
       secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
       aws_config_object: {},
     },
   },
+  // {
+  //   resolve: `medusa-plugin-meilisearch`,
+  //   options: {
+  //     config: {
+  //       host: process.env.MEILISEARCH_HOST,
+  //       apiKey: process.env.MEILISEARCH_API_KEY,
+  //     },
+  //     settings: {
+  //       products: {
+  //         indexSettings: {
+  //           searchableAttributes: [
+  //             "title", 
+  //             "description",
+  //             "variant_sku",
+  //           ],
+  //           displayedAttributes: [
+  //             "title", 
+  //             "description", 
+  //             "variant_sku", 
+  //             "thumbnail", 
+  //             "handle",
+  //           ],
+  //         },
+  //         primaryKey: "id",
+  //         transform: (product) => ({ 
+  //           id: product.id, 
+  //           // other attributes...
+  //         }),
+  //       },
+  //     },
+  //   },
+  // },
   {
-    resolve: `medusa-plugin-meilisearch`,
+    resolve: `medusa-fulfillment-shiprocket`,
     options: {
-      config: {
-        host: process.env.MEILISEARCH_HOST,
-        apiKey: process.env.MEILISEARCH_API_KEY,
-      },
-      settings: {
-        products: {
-          indexSettings: {
-            searchableAttributes: [
-              "title", 
-              "description",
-              "variant_sku",
-            ],
-            displayedAttributes: [
-              "title", 
-              "description", 
-              "variant_sku", 
-              "thumbnail", 
-              "handle",
-            ],
-          },
-          primaryKey: "id",
-          transform: (product) => ({ 
-            id: product.id, 
-            // other attributes...
-          }),
-        },
-      },
-    },
+      channel_id: process.env.SHIPROCKET_CHANNEL_ID, 
+      email: process.env.SHIPROCKET_EMAIL, 
+      password: process.env.SHIPROCKET_PASSWORD, 
+      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2NjMxNzAsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE1MjUzMTM5LCJqdGkiOiJta2k5Qk1RUXlqZnVuM1FqIiwiaWF0IjoxNzE0Mzg5MTM5LCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNDM4OTEzOSwiY2lkIjo0NTA4MjQ0LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.arpOZHMxVQxgGvoPad-3rDdCypIbNdkiNo5xMexY2Gk", //(required. leave empty)
+      pricing: 'flat_rate', //"flat_rate" or "calculated" (required)
+      length_unit: 'cm', //"mm", "cm" or "inches" (required)
+      multiple_items: 'single_shipment', //"single_shipment" or "split_shipment"(default) (required)
+      inventory_sync: true, //true or false(default) (required)
+      forward_action: 'create_fulfillment', //'create_fulfillment' or 'create_order'(default) (required)
+      return_action: 'create_fulfillment', //'create_fulfillment' or 'create_order'(default) (required)
+    }
   },
 ];
 
