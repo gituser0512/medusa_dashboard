@@ -100,8 +100,8 @@ const plugins = [
       length_unit: 'cm', //"mm", "cm" or "inches" (required)
       multiple_items: 'single_shipment', //"single_shipment" or "split_shipment"(default) (required)
       inventory_sync: true, //true or false(default) (required)
-      forward_action: 'create_order', //'create_fulfillment' or 'create_order'(default) (required)
-      return_action: 'create_order', //'create_fulfillment' or 'create_order'(default) (required)
+      forward_action: 'create_fulfillment', //'create_fulfillment' or 'create_order'(default) (required)
+      return_action: 'create_fulfillment', //'create_fulfillment' or 'create_order'(default) (required)
     }
   },
 ];
