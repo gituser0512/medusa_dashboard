@@ -96,12 +96,12 @@ const plugins = [
       email: process.env.SHIPROCKET_EMAIL, 
       password: process.env.SHIPROCKET_PASSWORD, 
       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2NjMxNzAsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE1MzMyMzYzLCJqdGkiOiJvbDJnU0lZdU1SQjUzZGpZIiwiaWF0IjoxNzE0NDY4MzYzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNDQ2ODM2MywiY2lkIjo0NTA4MjQ0LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.SuvUNvsrRpjCR-_lsqslepoS1uvstoyJMExj5pICtf8", //(required. leave empty)
-      pricing: 'flat_rate', //"flat_rate" or "calculated" (required)
+      pricing: 'calculated', //"flat_rate" or "calculated" (required)
       length_unit: 'cm', //"mm", "cm" or "inches" (required)
       multiple_items: 'single_shipment', //"single_shipment" or "split_shipment"(default) (required)
       inventory_sync: true, //true or false(default) (required)
-      forward_action: 'create_fulfillment', //'create_fulfillment' or 'create_order'(default) (required)
-      return_action: 'create_fulfillment', //'create_fulfillment' or 'create_order'(default) (required)
+      forward_action: 'create_order', //'create_fulfillment' or 'create_order'(default) (required)
+      return_action: 'create_order', //'create_fulfillment' or 'create_order'(default) (required)
     }
   },
 ];
