@@ -43,11 +43,11 @@
     "medusa-file-r2": "^0.0.2",
     "medusa-file-s3": "^1.4.1",
     "medusa-fulfillment-manual": "latest",
-    "medusa-fulfillment-shiprocket": "^0.1.0",
     "medusa-interfaces": "latest",
     "medusa-payment-manual": "latest",
     "medusa-payment-stripe": "latest",
     "medusa-plugin-meilisearch": "^2.0.10",
+    "medusa-shiprocket-fulfillment": "^0.2.0",
     "prism-react-renderer": "^2.0.4",
     "typeorm": "^0.3.16"
   },
