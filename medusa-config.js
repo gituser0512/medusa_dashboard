@@ -20,7 +20,6 @@ switch (process.env.NODE_ENV) {
 try {
   dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
 } catch (e) {}
-// commit for auto deploy
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
