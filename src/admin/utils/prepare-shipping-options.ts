@@ -7,14 +7,14 @@ export default async function prepareShippingOptions (client: Medusa, region: Re
   })
   if (!shipping_options.length) {
     shipping_options = [(await client.admin.shippingOptions.create({
-      "name": "PostFake Standard",
+      "name": "Medusa Shiprocket",
       "region_id": region.id,
-      "provider_id": "manual",
+      "provider_id": "shiprocket",
       "data": {
-        "id": "manual-fulfillment"
+        "id": "medusa-fulfillment-shipment"
       },
       // @ts-ignore
-      "price_type": "flat_rate",
+      "price_type": "calculated",
       "amount": 1000
     })).shipping_option]
   }
