@@ -58,7 +58,7 @@ const plugins = [
     },
   },
   {
-    resolve: `medusa-shiprocket-fulfillment`,
+    resolve: `medusa-fulfillment-shiprocket`,
     options: {
       channel_id: process.env.SHIPROCKET_CHANNEL_ID,
       email: process.env.SHIPROCKET_EMAIL,
