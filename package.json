@@ -45,9 +45,12 @@
     "medusa-fulfillment-manual": "latest",
     "medusa-fulfillment-shiprocket": "^0.1.0",
     "medusa-interfaces": "latest",
+    "medusa-nodemailer": "^0.2.5",
     "medusa-payment-manual": "latest",
     "medusa-payment-stripe": "latest",
     "medusa-plugin-meilisearch": "^2.0.10",
+    "medusa-plugin-nodemailer": "^0.1.4",
+    "nodemailer": "^6.9.13",
     "prism-react-renderer": "^2.0.4",
     "typeorm": "^0.3.16"
   },

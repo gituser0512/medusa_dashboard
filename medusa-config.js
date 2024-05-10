@@ -19,7 +19,7 @@ switch (process.env.NODE_ENV) {
 
 try {
   dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
-} catch (e) {}
+} catch (e) { }
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
@@ -72,10 +72,33 @@ const plugins = [
       return_action: "create_fulfillment", //'create_fulfillment' or 'create_order'(default) (required)
     },
   },
+  // {
+  //   resolve: `medusa-plugin-nodemailer`,
+  //   options: {
+  //     fromEmail: process.env.MAIL_USER,
+  //     transport: {
+  //       host: process.env.MAIL_HOST,
+  //       port: 465,
+  //       secureConnection: true,
+  //       auth: {
+  //         user: process.env.MAIL_USER,
+  //         pass: process.env.MAIL_PASS,
+  //       },
+  //     },
+
+  //     requireTLS: true,
+  //     emailTemplatePath: "data/emailTemplates",
+  //     templateMap: {
+
+  //       "order.placed": "orderplaced",
+  //     },
+  //   }
+
+  // }
 ];
 
 const modules = {
-  /*eventBus: {
+  eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
       redisUrl: REDIS_URL
@@ -86,7 +109,7 @@ const modules = {
     options: {
       redisUrl: REDIS_URL
     }
-  },*/
+  },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
@@ -97,7 +120,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
