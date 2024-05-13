@@ -24,7 +24,7 @@ class NodemailerService extends NotificationService {
     }
 
     async sendNotification(eventName, eventData, attachmentGenerator) {
-        
+        console.log(eventData, "event DAta")
         if (eventName === 'order.placed') {
             const order = await this.orderService.retrieve(eventData.id);
             const mailOptions = {
@@ -34,7 +34,7 @@ class NodemailerService extends NotificationService {
                 // text: `Order with id ${eventData.id} has been placed.`,
                 html: `
                 <div style="font-family: Arial, sans-serif; color: #333333; line-height: 1.5;">
-                <h2 style="color: #0077b6;">Hey ${eventData},</h2>
+                <h2 style="color: #0077b6;">Hey ,</h2>
                 <p>Thank you for your inquiry. Our team will reach out to you shortly.</p>
                 <a href="https://www.shopntrolly.com/in/account/orders" style="display: inline-block; background-color: #0077b6; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px;">VIEW OR MANAGE ORDER</a>
             
