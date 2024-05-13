@@ -1,7 +1,6 @@
 import nodemailer from 'nodemailer';
 import { NotificationService } from "medusa-interfaces";
-import Instagram from '../images/instagram.svg';
-import Youtube from '../images/youtube.svg'
+
 
 class NodemailerService extends NotificationService {
     static identifier = "nodemailer";
@@ -49,7 +48,7 @@ class NodemailerService extends NotificationService {
                   target="_blank"
                   rel="ShopNTrolly website"
                 >
-                  <img src=${Instagram} alt="" style="width: 30px; height: 30px;">
+                //   <img src=${Instagram} alt="" style="width: 30px; height: 30px;">
                 </a>
                 &
                 <a
@@ -57,7 +56,7 @@ class NodemailerService extends NotificationService {
                   target="_blank"
                   rel="ShopNTrolly website"
                 >
-                    <img src=${Youtube} alt="" style="width: 30px; height: 30px;">
+                    // <img src=${Youtube} alt="" style="width: 30px; height: 30px;">
                 </a>
                 </div>
               </div>
