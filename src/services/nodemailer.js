@@ -43,15 +43,15 @@ class NodemailerService extends NotificationService {
                 <p>Say hello to us! Drop in an email on <a href="mailto:hello@mail.shotntrolly.com" style="color: #0077b6;">hello@mail.shotntrolly.com</a> or call us on [+91 9156834305 / +91 8007529003] (We're available from 9 am to 5 pm on all days).</p>
                 <p>Thanks,<br>ShopNtrolly</p>
                 <div style="display: flex; align-items: center; margin-top: 20px;">
-                Connect with us {" "}
+                Connect with us 
                 <a
                   href=${"https://www.instagram.com/shopandtrolly/"}
                   target="_blank"
                   rel="ShopNTrolly website"
                 > 
-                Instagram {" "}
+                Instagram 
                 </a>
-                & {" "}
+                & 
                 <a
                   href=${"https://www.youtube.com/@shopntrolly"}
                   target="_blank"
