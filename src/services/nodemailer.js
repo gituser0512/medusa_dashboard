@@ -57,7 +57,7 @@ class NodemailerService extends NotificationService {
                   target="_blank"
                   rel="ShopNTrolly website"
                 >
-                    <img src=${youtube} alt="" style="width: 30px; height: 30px;">
+                    <img src=${Youtube} alt="" style="width: 30px; height: 30px;">
                 </a>
                 </div>
               </div>
