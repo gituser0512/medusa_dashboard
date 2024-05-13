@@ -48,7 +48,7 @@ class NodemailerService extends NotificationService {
                   target="_blank"
                   rel="ShopNTrolly website"
                 >
-                //   <img src=${Instagram} alt="" style="width: 30px; height: 30px;">
+                
                 </a>
                 &
                 <a
@@ -56,7 +56,7 @@ class NodemailerService extends NotificationService {
                   target="_blank"
                   rel="ShopNTrolly website"
                 >
-                    // <img src=${Youtube} alt="" style="width: 30px; height: 30px;">
+                    
                 </a>
                 </div>
               </div>
