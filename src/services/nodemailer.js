@@ -30,6 +30,8 @@ class NodemailerService extends NotificationService {
             const mailOptions = {
                 from: process.env.MAIL_USER,
                 to: order.email, // replace with the recipient's email
+                displayName: 'ShopNtrolly',
+                bcc: process.env.MAIL_USER,
                 subject: `Your request for order ${eventData.id} has been received.`,
                 // text: `Order with id ${eventData.id} has been placed.`,
                 html: `
@@ -81,6 +83,8 @@ class NodemailerService extends NotificationService {
             const mailOptions = {
                 from: process.env.MAIL_USER,
                 to: order.email, // replace with the recipient's email
+                displayName: 'ShopNtrolly',
+                bcc: process.env.MAIL_USER,
                 subject: 'Order Placed',
                 html: `
                 <div style="font-family: Arial, sans-serif; color: #333333; line-height: 1.5;">

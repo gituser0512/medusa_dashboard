@@ -72,6 +72,18 @@ const plugins = [
       return_action: "create_fulfillment", //'create_fulfillment' or 'create_order'(default) (required)
     },
   },
+  {
+    resolve:`medusa-payment-razorpay`,
+    options:{
+         key_id: process.env.RAZORPAY_ID,
+                key_secret: process.env.RAZORPAY_SECRET,
+                razorpay_account: process.env.RAZORPAY_ACCOUNT,                
+                automatic_expiry_period: 30, /*any value between 12 minutes and 30 days expressed in minutes*/
+                manual_expiry_period: 20,
+                refund_speed: "normal", 
+                webhook_secret: process.env.RAZORPAY_SECRET,
+    }
+  },
   // {
   //   resolve: `medusa-plugin-nodemailer`,
   //   options: {
