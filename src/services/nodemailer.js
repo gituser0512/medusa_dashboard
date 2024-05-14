@@ -29,7 +29,7 @@ class NodemailerService extends NotificationService {
             const order = await this.orderService.retrieve(eventData.id);
             console.log(order, "order details")
             const mailOptions = {
-                from: 'ShopNtrolly <hello@mail.shopntrolly.com>',
+                from: '"ShopNtrolly" <hello@mail.shopntrolly.com>',
                 to: order.email, // replace with the recipient's email
                 bcc: process.env.MAIL_USER,
                 subject: `Your request for order ${eventData.id} has been received.`,
@@ -81,7 +81,7 @@ class NodemailerService extends NotificationService {
         if (eventName === 'order.placed') {
             const order = await this.orderService.retrieve(eventData.id);
             const mailOptions = {
-                from: 'ShopNtrolly <hello@mail.shopntrolly.com>',
+                from: '"ShopNtrolly" <hello@mail.shopntrolly.com>',
                 to: order.email, // replace with the recipient's email
                 displayName: 'ShopNtrolly',
                 bcc: process.env.MAIL_USER,
