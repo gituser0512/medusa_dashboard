@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import { NotificationService } from "medusa-interfaces";
+import { Address } from '@medusajs/medusa';
 
 
 class NodemailerService extends NotificationService {
@@ -28,9 +29,8 @@ class NodemailerService extends NotificationService {
             const order = await this.orderService.retrieve(eventData.id);
             console.log(order, "order details")
             const mailOptions = {
-                from: process.env.MAIL_USER,
+                from: {name: 'ShopNtrolly', address: process.env.MAIL_USER},
                 to: order.email, // replace with the recipient's email
-                displayName: 'ShopNtrolly',
                 bcc: process.env.MAIL_USER,
                 subject: `Your request for order ${eventData.id} has been received.`,
                 // text: `Order with id ${eventData.id} has been placed.`,
@@ -81,7 +81,7 @@ class NodemailerService extends NotificationService {
         if (eventName === 'order.placed') {
             const order = await this.orderService.retrieve(eventData.id);
             const mailOptions = {
-                from: process.env.MAIL_USER,
+                from: {name: 'ShopNtrolly', address: process.env.MAIL_USER},
                 to: order.email, // replace with the recipient's email
                 displayName: 'ShopNtrolly',
                 bcc: process.env.MAIL_USER,
