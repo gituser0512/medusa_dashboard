@@ -52,6 +52,7 @@
     "medusa-plugin-algolia": "^0.2.20",
     "medusa-plugin-meilisearch": "^2.0.10",
     "medusa-plugin-nodemailer": "^0.1.4",
+    "medusa-shiprocket-fulfillment": "^0.2.1",
     "nodemailer": "^6.9.13",
     "prism-react-renderer": "^2.0.4",
     "typeorm": "^0.3.16"

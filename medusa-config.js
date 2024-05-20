@@ -109,7 +109,16 @@ const plugins = [
           },
           transformer: (product) => ({ 
             id: product.id, 
-            // other attributes...
+            title: product.title,
+            description: product.description,
+            handle: product.handle,
+            thumbnail: product.thumbnail,
+            variants: product.variants,
+            variant_sku: product.variant_sku,
+            options: product.options,
+            collection_title: product.collection_title,
+            collection_handle: product.collection_handle,
+            images: product.images,
           }),
         },
       },
