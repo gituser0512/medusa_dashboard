@@ -47,7 +47,7 @@
     "medusa-interfaces": "latest",
     "medusa-nodemailer": "^0.2.5",
     "medusa-payment-manual": "latest",
-    "medusa-payment-razorpay": "^7.1.3-next-6",
+    "medusa-payment-razorpay": "^7.2.0",
     "medusa-payment-stripe": "latest",
     "medusa-plugin-algolia": "^0.2.20",
     "medusa-plugin-meilisearch": "^2.0.10",
