@@ -64,7 +64,7 @@ const plugins = [
       email: process.env.SHIPROCKET_EMAIL,
       password: process.env.SHIPROCKET_PASSWORD,
       token: "", //(required. leave empty)
-      pricing: "calculated", //"flat_rate" or "calculated" (required)
+      pricing: "flat_rate", //"flat_rate" or "calculated" (required)
       length_unit: "cm", //"mm", "cm" or "inches" (required)
       multiple_items: "single_shipment", //"single_shipment" or "split_shipment"(default) (required)
       inventory_sync: false, //true or false(default) (required)
