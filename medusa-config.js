@@ -63,7 +63,7 @@ const plugins = [
       channel_id: process.env.SHIPROCKET_CHANNEL_ID,
       email: process.env.SHIPROCKET_EMAIL,
       password: process.env.SHIPROCKET_PASSWORD,
-      token: "", //(required. leave empty)
+      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ3MzkzODQsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE3MzM4MDQxLCJqdGkiOiJydldXSEpOS0N4SXZKeUtKIiwiaWF0IjoxNzE2NDc0MDQxLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNjQ3NDA0MSwiY2lkIjo0NTA4MjQ0LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.Nbxk8BPrZ6BgmFgoVoH3UghjAjGqswjZjqDjoYll0U8", //(required. leave empty)
       pricing: "flat_rate", //"flat_rate" or "calculated" (required)
       length_unit: "cm", //"mm", "cm" or "inches" (required)
       multiple_items: "single_shipment", //"single_shipment" or "split_shipment"(default) (required)
@@ -73,15 +73,15 @@ const plugins = [
     },
   },
   {
-    resolve:`medusa-payment-razorpay`,
-    options:{
-         key_id: process.env.RAZORPAY_ID,
-                key_secret: process.env.RAZORPAY_SECRET,
-                razorpay_account: process.env.RAZORPAY_ACCOUNT,                
-                automatic_expiry_period: 30, /*any value between 12 minutes and 30 days expressed in minutes*/
-                manual_expiry_period: 20,
-                refund_speed: "normal", 
-                webhook_secret: process.env.RAZORPAY_SECRET,
+    resolve: `medusa-payment-razorpay`,
+    options: {
+      key_id: process.env.RAZORPAY_ID,
+      key_secret: process.env.RAZORPAY_SECRET,
+      razorpay_account: process.env.RAZORPAY_ACCOUNT,
+      automatic_expiry_period: 30, /*any value between 12 minutes and 30 days expressed in minutes*/
+      manual_expiry_period: 2880,
+      refund_speed: "normal",
+      webhook_secret: process.env.RAZORPAY_SECRET,
     }
   },
   {
@@ -107,8 +107,8 @@ const plugins = [
               "images",
             ],
           },
-          transformer: (product) => ({ 
-            id: product.id, 
+          transformer: (product) => ({
+            id: product.id,
             title: product.title,
             description: product.description,
             handle: product.handle,
