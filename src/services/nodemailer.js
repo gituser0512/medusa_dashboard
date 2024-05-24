@@ -29,18 +29,18 @@ class NodemailerService extends NotificationService {
             const order = await this.orderService.retrieve(eventData.id);
             console.log(order, "order details")
             const mailOptions = {
-                from: process.env.MAIL_USER,
+                from: `Consultation <${process.env.MAIL_USER}>`,
                 to: order.email, // replace with the recipient's email
                 bcc: process.env.MAIL_USER,
-                subject: `Your request for order ${eventData.id} has been received.`,
+                subject: `Your Order for order ${eventData.id} has been received.`,
                 // text: `Order with id ${eventData.id} has been placed.`,
                 html: `
                 <div style="font-family: Arial, sans-serif; color: #333333; line-height: 1.5;">
-                <h2 style="color: #0077b6;">Greeting,</h2>
+                <h2 style="color: #0077b6;">Greetings ,</h2>
                 <p>Thank you for your inquiry. Our team will reach out to you shortly.</p>
                 <a href="https://www.shopntrolly.com/in/account/" style="display: inline-block; background-color: #0077b6; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px;">VIEW OR MANAGE ORDER</a>
             
-                <p><strong>Your Request Id ${eventData.id} has been placed.</strong></p>
+                <p><strong>Your Order Id ${eventData.id} has been placed.</strong></p>
                 <p>You can make your shopping experience easier, quicker and more personal - access your order history, get recommended products, exclusive offers, wishlist collections and more simply by creating an exclusive account.</p>
                 <p>Say hello to us! Drop in an email on <a href="mailto:hello@mail.shotntrolly.com" style="color: #0077b6;">hello@mail.shotntrolly.com</a> or call us on [+91 9156834305 / +91 8007529003] (We're available from 9 am to 5 pm on all days).</p>
                 <p>Thanks,<br>ShopNtrolly</p>
@@ -81,7 +81,7 @@ class NodemailerService extends NotificationService {
         if (eventName === 'order.placed') {
             const order = await this.orderService.retrieve(eventData.id);
             const mailOptions = {
-                from: process.env.MAIL_USER,
+                from: `Consultation <${process.env.MAIL_USER}>`,
                 to: order.email, // replace with the recipient's email
                 displayName: 'ShopNtrolly',
                 bcc: process.env.MAIL_USER,
@@ -92,7 +92,7 @@ class NodemailerService extends NotificationService {
                 <p>Thank you for your inquiry. Our team will reach out to you shortly.</p>
                 <a href="https://www.shopntrolly.com/in/account/orders" style="display: inline-block; background-color: #0077b6; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px;">VIEW OR MANAGE ORDER</a>
             
-                <p><strong>Your Request Id ${eventData.id} has been placed.</strong></p>
+                <p><strong>Your Order Id ${eventData.id} has been placed.</strong></p>
                 <p>You can make your shopping experience easier, quicker and more personal - access your order history, get recommended products, exclusive offers, wishlist collections and more simply by creating an exclusive account.</p>
                 <p>Say hello to us! Drop in an email on <a href="mailto:hello@mail.shotntrolly.com" style="color: #0077b6;">hello@mail.shotntrolly.com</a> or call us on [+91 9156834305 / +91 8007529003] (We're available from 9 am to 5 pm on all days).</p>
                 <p>Thanks,<br>ShopNtrolly</p>
